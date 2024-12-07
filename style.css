@@ -1,22 +1,23 @@
-:root{
+:root {
   --hover: rgba(87, 93, 184, 0.656);
-  --section1:  rgba(230, 224, 255, 0.274);
---section2: rgb(239, 239, 239);
---text1:  rgb(52, 52, 52);
---text2:  rgb(50, 50, 50);
---text3: rgb(74, 74, 74);
+  --section1: rgba(230, 224, 255, 0.274);
+  --section2: rgb(253, 253, 253);
+  --text1: rgb(52, 52, 52);
+  --text2: rgb(50, 50, 50);
+  --text3: rgb(74, 74, 74);
+  --textSize1: 2.5em;
+  --textSize2: 2em;
+  --textSize3: 1.2em;
+  --textSize4: 0.9em;
 }
-
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
-body{
+body {
   font-family: "Roboto";
   color: var(--text2);
 }
@@ -36,7 +37,6 @@ a:hover {
 
 .wrapper {
   width: 100%;
- 
 }
 
 /**nav**/
@@ -56,7 +56,7 @@ ul li {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.114);
   font-family: "Roboto";
   font-weight: 300;
-  font-size: 0.9em;
+  font-size: var(--textSize4);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,6 +65,7 @@ ul li {
 #logo {
   padding-left: 50px;
   font-weight: 400;
+  font-size: var(--textSize4);
 }
 
 .nav ul {
@@ -74,61 +75,125 @@ ul li {
   align-items: center;
 }
 
-section{
+section {
   padding: 40px 50px 40px 50px;
 }
 
-
 /**inicio**/
 
-#inicio{
+#inicio {
   background-color: var(--section1);
   height: 90vh;
- display: flex;
- justify-content: center;
- align-items: center;
-}
-
-.wrapper-content{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 40px;
-
 }
 
-.wrapper-text{
-  width: 50%;
+.wrapper-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.wrapper-text p{
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  width: 85%;
+}
+
+.wrapper-text {
+  width: 60%;
+}
+
+.wrapper-text p {
   font-size: 1.2em;
- color: var(--text3);
+  color: var(--text3);
+  line-height: 1.3;
+  width: 85%;
 }
 
-.title-inicio{
+.title-inicio {
+  font-family: "Poppins";
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.wrapper-img {
+  width: 40%;
+}
+
+#inicio img {
+  width: 100%;
+}
+
+#icons-wrapper {
+  margin-top: 50px;
+}
+
+#icons-wrapper img {
+  width: 50px;
+  margin-right: 15px;
+  transition: transform ease-in .2s;
+}
+
+#icons-wrapper img:hover{
+  transform: scale(1.2);
+}
+
+/**sobre**/
+
+#sobre{
+  display: flex;
+  background-color: var(--section2);
+  justify-content: center;
+  align-items: center;
+  padding: 50px 90px 50px 90px;
+  height: 90vh;
+  
+}
+
+.wrapper-img-sobre {
+  width: 35%;
+}
+
+.wrapper-img-sobre img{
+width: 100%;
+}
+
+.title-section{
   font-family: "Roboto";
   font-weight: 400;
-margin-bottom: 30px;
-font-size: 2.8em;
+  margin-bottom: 20px;
+  font-size: var(--textSize2);
+}
+
+/**formacao**/
+
+#formacao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--section1);
+  padding: 50px 90px 50px 90px;
+  height: 90vh;
 
 }
 
-
-.wrapper-img{
-
+.wrapper-img-formacao {
+  width: 30%;
 }
 
-#inicio img{
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  box-shadow: 0 0 10px rgba(131, 131, 131, 0.068);
+.wrapper-img-formacao img{
+width: 100%;
 }
 
+#list-formacao {
+  font-size: var(--textSize3);
+}
 
-
-
-
-
-
+#list-formacao li {
+  list-style-type:disc;
+}
