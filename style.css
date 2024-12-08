@@ -5,8 +5,9 @@
   --text1: rgb(52, 52, 52);
   --text2: rgb(50, 50, 50);
   --text3: rgb(74, 74, 74);
+  --text4: rgb(68, 57, 83);
   --textSize1: 2.5em;
-  --textSize2: 2em;
+  --textSize2: 1.6em;
   --textSize3: 1.2em;
   --textSize4: 0.9em;
 }
@@ -28,9 +29,10 @@ a {
   transform: scale(1);
   cursor: pointer;
   display: inline-block;
+  color: var(--text4);
 }
 
-a:hover {
+.nav a:hover {
   transform: scale(1.1);
   color: var(--hover);
 }
@@ -60,6 +62,11 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 #logo {
@@ -136,11 +143,11 @@ section {
 #icons-wrapper img {
   width: 50px;
   margin-right: 15px;
-  transition: transform ease-in .2s;
+  transition: transform ease-in .1s;
 }
 
 #icons-wrapper img:hover{
-  transform: scale(1.2);
+  transform: translateY(-8px);
 }
 
 /**sobre**/
@@ -183,7 +190,7 @@ width: 100%;
 }
 
 .wrapper-img-formacao {
-  width: 30%;
+  width: 25%;
 }
 
 .wrapper-img-formacao img{
@@ -196,4 +203,117 @@ width: 100%;
 
 #list-formacao li {
   list-style-type:disc;
+}
+
+/**formacao**/
+
+#portfolio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 90px 80px 90px;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.083);
+  border-radius: 12px;
+  width: 80%;
+  margin: 30px 0 30px 0;
+  gap: 50px;
+}
+
+
+.card-img{
+ width: 50%;
+}
+
+.card-img img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 40%;
+}
+
+.title-project{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.2em;
+ 
+}
+
+.text-project {
+text-align: center;
+}
+
+.card-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px
+}
+
+.card-link {
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card-link span{
+  display: flex;
+justify-content: center;
+  align-items: center;
+}
+
+.card-link img{
+  width: 22px;
+  margin-left: 6px;
+}
+
+.card-link a:hover{
+color: var(--hover);
+}
+
+footer{
+  background-color: var(--section1);
+  padding: 30px 0 30px 0;
+}
+
+#footer-icons-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#footer-icons-wrapper img{
+  width: 26px;
+}
+
+#footer-icons-wrapper img {
+  transition: tranform 1.2s ease-in-out;
+}
+
+#footer-icons-wrapper img:hover{
+  transform: scale(1.2);
+}
+
+#title-section-portfolio{
+  font-family: "Roboto";
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-size: var(--textSize2);
+  
 }
