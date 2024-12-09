@@ -1,5 +1,6 @@
 :root {
   --hover: rgba(87, 93, 184, 0.656);
+  --hover2: rgb(218, 184, 240);
   --section1: rgba(230, 224, 255, 0.274);
   --section2: rgb(253, 253, 253);
   --text1: rgb(52, 52, 52);
@@ -7,9 +8,11 @@
   --text3: rgb(74, 74, 74);
   --text4: rgb(68, 57, 83);
   --textSize1: 2.5em;
-  --textSize2: 1.6em;
+  --textSize2: 1.8em;
   --textSize3: 1.2em;
   --textSize4: 0.9em;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.083);
+  --backgr-button: rgb(192, 161, 212);
 }
 
 * {
@@ -32,7 +35,7 @@ a {
   color: var(--text4);
 }
 
-.nav a:hover {
+nav a:hover {
   transform: scale(1.1);
   color: var(--hover);
 }
@@ -51,7 +54,7 @@ ul li {
   list-style-type: none;
 }
 
-.nav {
+nav {
   background-color: rgb(255, 255, 255);
   padding: 20px 10px;
   height: 8vh;
@@ -66,7 +69,11 @@ ul li {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
+}
+
+#menu-hamburguer{
+  display: none;
 }
 
 #logo {
@@ -75,7 +82,7 @@ ul li {
   font-size: var(--textSize4);
 }
 
-.nav ul {
+nav ul {
   display: flex;
   width: 50%;
   justify-content: space-evenly;
@@ -203,9 +210,10 @@ width: 100%;
 
 #list-formacao li {
   list-style-type:disc;
+  margin-bottom: 16px;
 }
 
-/**formacao**/
+/**portfolio**/
 
 #portfolio{
   display: flex;
@@ -221,7 +229,7 @@ width: 100%;
   justify-content: center;
   align-items: center;
   padding: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.083);
+  box-shadow: var(--box-shadow);
   border-radius: 12px;
   width: 80%;
   margin: 30px 0 30px 0;
@@ -286,8 +294,60 @@ justify-content: center;
 color: var(--hover);
 }
 
-footer{
+/**contato**/
+#contato{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 90px 80px 90px;
   background-color: var(--section1);
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+input, textarea{
+margin-bottom: 20px;
+padding: 8px 0 8px 6px;
+border: none;
+box-shadow: var(--box-shadow);
+border-radius: 4px;
+transition: border-color 0.1s ease; 
+
+}
+
+form input:focus{
+  border-color: black;
+}
+
+form textarea:focus{
+  border-color: black;
+}
+
+form button {
+  border: none;
+  padding: 6px;
+  background-color: var(--backgr-button);
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+  color: white;
+ cursor: pointer;
+}
+
+
+form button:hover{
+background-color: var(--hover2);
+}
+
+/**footer**/
+
+footer{
+  background-color: var(--section2);
   padding: 30px 0 30px 0;
 }
 
@@ -316,4 +376,145 @@ footer{
   margin-bottom: 20px;
   font-size: var(--textSize2);
   
+}
+
+/**menu mobile**/
+@media (max-width: 880px){
+  #menu{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: rgb(233, 228, 255);
+    height: calc(100vh - 50px);
+    z-index: 1000;
+  }
+
+  #nav.active #menu{
+    display: block;
+    text-align: center;
+    
+  }
+
+  #menu li a{
+    padding: 40px 0 40px 0;
+  }
+  
+  #menu-hamburguer{
+    display: block;
+    cursor: pointer;
+    width: 24px;
+    margin-right: 80px;
+    border: none;
+    background-color: white;
+  }
+  #menu-hamburguer img{
+    width: 24px;
+  }
+
+  
+
+  #menu.show{
+    display: flex;
+    position: absolute;
+    left:0;
+    right: 0;
+
+  }
+
+  #close-icon{
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 580px){
+
+  #logo{
+    padding-left: 20px;
+  }
+
+  #menu-hamburguer{
+ margin-right: 20px;
+  }
+
+
+ #sobre, #formacao, #contato{
+  margin: 90px 10px 150px 10px;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+#inicio{
+  height: 100vh;
+  padding: 200px 10px 100px 10px;
+}
+
+#inicio .wrapper-img img{
+  display: none;
+}
+
+.wrapper-text h1{
+  font-size: 1.5em;
+}
+
+.wrapper-text p{
+  font-size: var(--text4);
+}
+
+
+.main-content {
+flex-direction: column;
+width: 100%;
+height: 100vh;
+justify-content: center;
+
+}
+
+.wrapper-img-sobre{
+  margin-top: 40px;
+width: 60%;
+}
+
+
+/**portfolio**/
+
+#portfolio{
+ width: 100%;
+ padding: 10px 50px 10px 0px;
+}
+
+.card{
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-img{
+  width: 100%;
+}
+
+.card-description{
+  width: 100%;
+}
+
+#contato{
+  width: 100%;
+  height: 100vh;
+}
+
+
+}
+
+
+@media (max-width: 500px){
+
+  #menu-hamburguer{
+    margin-right: 70px;
+  }
+
+
+
 }

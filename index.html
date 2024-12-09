@@ -14,16 +14,20 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="nav">
+      <nav id="nav">
         <p id="logo">&lt; MariaCenci /&gt;</p>
-        <ul>
+       <button id="menu-hamburguer"> <img class="hamburguer" src="./icons/menuMobile.svg" alt=""></button>
+     
+        <ul id="menu">
           <li><a href="#inicio">Início</a></li>
           <li><a href="#sobre">Sobre mim</a></li>
           <li><a href="#formacao">Formação</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
-      </div>
+      </nav>
 
+      <!-- INICIO -->
       <section id="inicio">
         <div class="wrapper-content">
           <div class="main-content">
@@ -33,70 +37,69 @@
                 Olá, sou Maria Fernanda, estudante de Análise e Desenvolvimento
                 de Sistemas, bem-vindos ao meu portfólio!
               </p>
-
               <div id="icons-wrapper">
-                <img src="./icons/html.svg" alt="" />
-                <img src="./icons/css.svg" alt="" /> 
-                <img src="./icons/sass.svg" alt="" />
-                <img src="./icons/js.svg" alt="" />
-                <img src="./icons/ts.svg" alt="" />
-                <img src="./icons/react.svg" alt="" />
-              
+                <img src="./icons/html.svg" alt="Ícone HTML" />
+                <img src="./icons/css.svg" alt="Ícone CSS" />
+                <img src="./icons/sass.svg" alt="Ícone SASS" />
+                <img src="./icons/js.svg" alt="Ícone JavaScript" />
+                <img src="./icons/ts.svg" alt="Ícone TypeScript" />
+                <img src="./icons/react.svg" alt="Ícone React" />
               </div>
             </div>
-
             <div class="wrapper-img">
-              <img src="./images/person.png" alt="" />
+              <img
+                src="./images/person.png"
+                alt="Imagem ilustrativa de uma pessoa"
+              />
             </div>
           </div>
         </div>
       </section>
+
+      <!-- SOBRE -->
       <section id="sobre">
         <div class="main-content">
           <div class="wrapper-text">
             <h1 class="title-section">Sobre mim</h1>
             <p>
               Brasileira, moro em Laguna, Santa Catarina, porém passei 7 anos da
-              minha vida na Itália, onde aprendi a lingua italiana e cresci
-              consieravelmente do ponto de vista pessoal. <br />
-              <br />
+              minha vida na Itália, onde aprendi a língua italiana e cresci
+              consideravelmente do ponto de vista pessoal. <br /><br />
               Sou estudante de Análise e Desenvolvimento de sistemas da
-              Universidade Uninter, atualmente do primeiro semestre. Antes de
-              iniciar meus estudos universitários, já havia tido um contato com
-              a área de TI por meio da Programação Web, área pela qual sou
+              Universidade Uninter, atualmente no primeiro semestre. Antes de
+              iniciar meus estudos universitários, já havia tido contato com a
+              área de TI por meio da Programação Web, área pela qual sou
               apaixonada e decidi aprimorar sempre mais minhas habilidades.
             </p>
           </div>
-
           <div class="wrapper-img-sobre">
-            <img src="./images/laptop.png" alt="" />
+            <img src="./images/laptop.png" alt="Imagem de um laptop" />
           </div>
         </div>
       </section>
+
+      <!-- FORMAÇÃO -->
       <section id="formacao">
         <div class="main-content">
           <div class="wrapper-text">
             <h1 class="title-section">Formação</h1>
             <ul id="list-formacao">
               <li>2016 - 2022: Ensino Médio, Itália</li>
-              <br />
               <li>2022 - 2024: Curso Programação Web, Itália</li>
-              <br />
               <li>
                 2024 - atual: Tecnólogo em Análise e Desenvolvimento de
                 Sistemas, Brasil
               </li>
-              <br />
               <li>2024 - atual: Curso Java, Brasil</li>
             </ul>
           </div>
-
           <div class="wrapper-img-formacao">
-            <img src="./images/student.png" alt="" />
+            <img src="./images/student.png" alt="Imagem de um estudante" />
           </div>
         </div>
       </section>
 
+      <!-- PORTFOLIO -->
       <section id="portfolio">
         <h1 id="title-section-portfolio">Portfolio</h1>
         <div class="card">
@@ -130,12 +133,10 @@
           </div>
         </div>
 
-
         <div class="card">
           <div class="card-img">
             <img src="./images/moviesLib.png" alt="" />
           </div>
-
           <div class="card-description">
             <h4 class="title-project">MOVIES LIBRARY</h4>
             <p class="text-project">Uma interface responsiva que utiliza a API "The Movies Database" para obter diferentes gêneros e tipos de filmes. Também inclui uma ferramenta de busca.</p>
@@ -155,31 +156,23 @@
                     >Visitar site
                   </a>
                     <img src="./icons/eye.svg" alt="" />
-                  
                 </span>
               </div>
             </div>
           </div>
         </div>
 
-
-
-
 <div class="card">
-  
   <div class="card-img">
     <img src="./images/portfolio.png" alt="" />
   </div>
-
   <div class="card-description">
     <h4 class="title-project">PORTFOLIO</h4>
     <p class="text-project">Meu portfolio criado com React.js, vite como ferramenta de build e Sass para estilização.</p>
     <div class="card-links">
       <div class="card-link">
         <span>
-          <a href="https://github.com/MariaCenci/portfolio" target="_blank"
-            >Código</a
-          >
+          <a href="https://github.com/MariaCenci/portfolio" target="_blank">Código</a>
           <img src="./icons/github2.svg" alt="" />
         </span>
       </div>
@@ -196,17 +189,47 @@
   </div>
       </section>
 
+      <!-- CONTATO -->
+      <section id="contato">
+        <div class="main-content">
+          <div class="wrapper-text">
+            <h1 class="title-section">Contato</h1>
+            <form id="form">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" />
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Seu email" />
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Sua mensagem"
+              ></textarea>
+              <button type="submit">ENVIAR</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- RODAPÉ -->
       <footer>
         <div id="footer-icons-wrapper">
-         <a href="https://github.com/MariaCenci" target="_blank">
-          <img id="github-icon" src="./icons/github.svg" alt="">
-         </a> 
-        <a href="https://www.linkedin.com/in/maria-fernanda-potricos-cenci-23a909276/" target="_blank" >
-             <img id="linkedin-icon" src="./icons/linkedin-icon.svg" alt="" about="_blank">
-        </a>  
-     
+          <a href="https://github.com/MariaCenci" target="_blank">
+            <img id="github-icon" src="./icons/github.svg" alt="GitHub" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/maria-fernanda-potricos-cenci-23a909276/"
+            target="_blank"
+          >
+            <img
+              id="linkedin-icon"
+              src="./icons/linkedin-icon.svg"
+              alt="LinkedIn"
+            />
+          </a>
         </div>
       </footer>
     </div>
+   <script src="script.js"></script>
   </body>
 </html>
