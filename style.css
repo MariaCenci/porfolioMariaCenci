@@ -10,7 +10,9 @@
   --textSize1: 2.5em;
   --textSize2: 1.8em;
   --textSize3: 1.2em;
-  --textSize4: 0.9em;
+  --textSize4: 0.8em;
+  --textSize5: 1.5em;
+  --logo: 1em;
   --box-shadow: 0 0 10px rgba(0, 0, 0, 0.083);
   --backgr-button: rgb(192, 161, 212);
 }
@@ -61,7 +63,7 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.114);
   font-family: "Roboto";
   font-weight: 300;
-  font-size: var(--textSize4);
+  font-size: var(--logo);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,14 +74,14 @@ nav {
   z-index: 1000;
 }
 
-#menu-hamburguer{
+#menu-hamburguer {
   display: none;
 }
 
 #logo {
   padding-left: 50px;
   font-weight: 400;
-  font-size: var(--textSize4);
+  font-size: var(--logo);
 }
 
 nav ul {
@@ -150,34 +152,33 @@ section {
 #icons-wrapper img {
   width: 50px;
   margin-right: 15px;
-  transition: transform ease-in .1s;
+  transition: transform ease-in 0.1s;
 }
 
-#icons-wrapper img:hover{
+#icons-wrapper img:hover {
   transform: translateY(-8px);
 }
 
 /**sobre**/
 
-#sobre{
+#sobre {
   display: flex;
   background-color: var(--section2);
   justify-content: center;
   align-items: center;
   padding: 50px 90px 50px 90px;
   height: 90vh;
-  
 }
 
 .wrapper-img-sobre {
   width: 35%;
 }
 
-.wrapper-img-sobre img{
-width: 100%;
+.wrapper-img-sobre img {
+  width: 100%;
 }
 
-.title-section{
+.title-section {
   font-family: "Roboto";
   font-weight: 400;
   margin-bottom: 20px;
@@ -186,22 +187,21 @@ width: 100%;
 
 /**formacao**/
 
-#formacao{
+#formacao {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--section1);
   padding: 50px 90px 50px 90px;
   height: 90vh;
-
 }
 
 .wrapper-img-formacao {
   width: 25%;
 }
 
-.wrapper-img-formacao img{
-width: 100%;
+.wrapper-img-formacao img {
+  width: 100%;
 }
 
 #list-formacao {
@@ -209,13 +209,13 @@ width: 100%;
 }
 
 #list-formacao li {
-  list-style-type:disc;
+  list-style-type: disc;
   margin-bottom: 16px;
 }
 
 /**portfolio**/
 
-#portfolio{
+#portfolio {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -223,7 +223,7 @@ width: 100%;
   padding: 80px 90px 80px 90px;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -236,17 +236,16 @@ width: 100%;
   gap: 50px;
 }
 
-
-.card-img{
- width: 50%;
+.card-img {
+  width: 50%;
 }
 
-.card-img img{
+.card-img img {
   width: 100%;
   border-radius: 10px;
 }
 
-.card-description{
+.card-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -255,47 +254,46 @@ width: 100%;
   width: 40%;
 }
 
-.title-project{
+.title-project {
   font-family: "Poppins";
   font-weight: 500;
-  font-size: 1.2em;
- 
+  font-size: 1em;
 }
 
 .text-project {
-text-align: center;
+  text-align: center;
 }
 
-.card-links{
+.card-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px
+  gap: 20px;
 }
 
 .card-link {
   display: flex;
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.card-link span{
+.card-link span {
   display: flex;
-justify-content: center;
+  justify-content: center;
   align-items: center;
 }
 
-.card-link img{
+.card-link img {
   width: 22px;
   margin-left: 6px;
 }
 
-.card-link a:hover{
-color: var(--hover);
+.card-link a:hover {
+  color: var(--hover);
 }
 
 /**contato**/
-#contato{
+#contato {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -304,28 +302,27 @@ color: var(--hover);
   background-color: var(--section1);
 }
 
-form{
+form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  
 }
 
-input, textarea{
-margin-bottom: 20px;
-padding: 8px 0 8px 6px;
-border: none;
-box-shadow: var(--box-shadow);
-border-radius: 4px;
-transition: border-color 0.1s ease; 
-
+input,
+textarea {
+  margin-bottom: 20px;
+  padding: 8px 0 8px 6px;
+  border: none;
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+  transition: border-color 0.1s ease;
 }
 
-form input:focus{
+form input:focus {
   border-color: black;
 }
 
-form textarea:focus{
+form textarea:focus {
   border-color: black;
 }
 
@@ -336,29 +333,28 @@ form button {
   box-shadow: var(--box-shadow);
   border-radius: 4px;
   color: white;
- cursor: pointer;
+  cursor: pointer;
 }
 
-
-form button:hover{
-background-color: var(--hover2);
+form button:hover {
+  background-color: var(--hover2);
 }
 
 /**footer**/
 
-footer{
+footer {
   background-color: var(--section2);
   padding: 30px 0 30px 0;
 }
 
-#footer-icons-wrapper{
+#footer-icons-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
-#footer-icons-wrapper img{
+#footer-icons-wrapper img {
   width: 26px;
 }
 
@@ -366,21 +362,20 @@ footer{
   transition: tranform 1.2s ease-in-out;
 }
 
-#footer-icons-wrapper img:hover{
+#footer-icons-wrapper img:hover {
   transform: scale(1.2);
 }
 
-#title-section-portfolio{
+#title-section-portfolio {
   font-family: "Roboto";
   font-weight: 400;
   margin-bottom: 20px;
   font-size: var(--textSize2);
-  
 }
 
 /**menu mobile**/
-@media (max-width: 880px){
-  #menu{
+@media (max-width: 880px) {
+  #menu {
     display: none;
     width: 100%;
     position: absolute;
@@ -391,17 +386,16 @@ footer{
     z-index: 1000;
   }
 
-  #nav.active #menu{
+  #nav.active #menu {
     display: block;
     text-align: center;
-    
   }
 
-  #menu li a{
+  #menu li a {
     padding: 40px 0 40px 0;
   }
-  
-  #menu-hamburguer{
+
+  #menu-hamburguer {
     display: block;
     cursor: pointer;
     width: 24px;
@@ -409,112 +403,132 @@ footer{
     border: none;
     background-color: white;
   }
-  #menu-hamburguer img{
+  #menu-hamburguer img {
     width: 24px;
   }
 
-  
-
-  #menu.show{
+  #menu.show {
     display: flex;
     position: absolute;
-    left:0;
+    left: 0;
     right: 0;
-
   }
 
-  #close-icon{
+  #close-icon {
     display: none;
   }
-
 }
 
-
-@media (max-width: 580px){
-
-  #logo{
+@media (max-width: 700px) {
+  #logo {
     padding-left: 20px;
   }
 
-  #menu-hamburguer{
- margin-right: 20px;
+  #sobre,
+  #contato {
+    padding: 100px 10px 150px 10px;
+    height: 100vh;
+    width: 100%;
   }
 
-
- #sobre, #formacao, #contato{
-  margin: 90px 10px 150px 10px;
-  padding: 0;
-  height: 100vh;
-  width: 100%;
-}
-
-#inicio{
-  height: 100vh;
-  padding: 200px 10px 100px 10px;
-}
-
-#inicio .wrapper-img img{
-  display: none;
-}
-
-.wrapper-text h1{
-  font-size: 1.5em;
-}
-
-.wrapper-text p{
-  font-size: var(--text4);
-}
-
-
-.main-content {
-flex-direction: column;
-width: 100%;
-height: 100vh;
-justify-content: center;
-
-}
-
-.wrapper-img-sobre{
-  margin-top: 40px;
-width: 60%;
-}
-
-
-/**portfolio**/
-
-#portfolio{
- width: 100%;
- padding: 10px 50px 10px 0px;
-}
-
-.card{
-  flex-direction: column;
-  width: 100%;
-}
-
-.card-img{
-  width: 100%;
-}
-
-.card-description{
-  width: 100%;
-}
-
-#contato{
-  width: 100%;
-  height: 100vh;
-}
-
-
-}
-
-
-@media (max-width: 500px){
-
-  #menu-hamburguer{
-    margin-right: 70px;
+  #formacao {
+    padding: 40px 10px 40px 10px;
+    height: 100vh;
+    width: 100%;
   }
 
+  #inicio {
+    height: 100vh;
+    padding: 60px 10px 60px 10px;
+  }
 
+  .wrapper-text {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--textSize4);
+  }
 
+  #icons-wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #icons-wrapper img {
+    width: 35px;
+  }
+
+  #inicio .wrapper-img img {
+    display: none;
+  }
+
+  .title-section {
+    font-size: var(--textSize5);
+    padding-top: 50px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  #sobre {
+    padding: 10px 10px 10px 10px;
+  }
+
+  .wrapper-img-sobre {
+    margin-top: 40px;
+    width: 60%;
+  }
+
+  /**portfolio**/
+
+  #portfolio {
+    width: 100%;
+    padding: 50px 50px 10px 50px;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card-img {
+    width: 100%;
+  }
+
+  .card-description {
+    width: 100%;
+    font-size: var(--textSize4);
+  }
+
+  #contato {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 500px) {
+  #menu-hamburguer {
+    margin-right: 30px;
+  }
+
+  #inicio {
+    height: 100vh;
+    width: 100%;
+    padding: 60px 10px 60px 10px;
+  }
+
+  .wrapper-text {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-content {
+  }
+}
+
+@media (max-width: 581px) {
 }
