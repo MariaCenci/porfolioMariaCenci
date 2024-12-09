@@ -15,6 +15,7 @@
   --logo: 1em;
   --box-shadow: 0 0 10px rgba(0, 0, 0, 0.083);
   --backgr-button: rgb(192, 161, 212);
+  --backgr-menu: rgb(248, 246, 255);
 }
 
 * {
@@ -166,7 +167,7 @@ section {
   background-color: var(--section2);
   justify-content: center;
   align-items: center;
-  padding: 50px 90px 50px 90px;
+  padding: 50px 40px 50px 40px;
   height: 90vh;
 }
 
@@ -381,7 +382,7 @@ footer {
     position: absolute;
     top: 50px;
     right: 0;
-    background-color: rgb(233, 228, 255);
+    background-color: var(--backgr-menu);
     height: calc(100vh - 50px);
     z-index: 1000;
   }
@@ -417,6 +418,14 @@ footer {
   #close-icon {
     display: none;
   }
+
+  .title-inicio {
+    font-size: var(--textSize2);
+  }
+
+  #icons-wrapper img {
+    width: 38px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -424,9 +433,14 @@ footer {
     padding-left: 20px;
   }
 
-  #sobre,
-  #contato {
+  #sobre {
     padding: 100px 10px 150px 10px;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #contato {
+    padding: 20px 10px 40px 10px;
     height: 100vh;
     width: 100%;
   }
@@ -464,7 +478,11 @@ footer {
 
   .title-section {
     font-size: var(--textSize5);
-    padding-top: 50px;
+    padding-top: 100px;
+  }
+
+  #contato .title-section {
+    padding-top: 10px;
   }
 
   .main-content {
@@ -474,19 +492,19 @@ footer {
   }
 
   #sobre {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 100px 10px;
   }
 
-  .wrapper-img-sobre {
-    margin-top: 40px;
-    width: 60%;
+  .wrapper-img-sobre img {
+    margin-top: 10px;
+    width: 100%;
   }
 
   /**portfolio**/
 
   #portfolio {
     width: 100%;
-    padding: 50px 50px 10px 50px;
+    padding: 10px 50px 70px 50px;
   }
 
   .card {
@@ -500,7 +518,7 @@ footer {
 
   .card-description {
     width: 100%;
-    font-size: var(--textSize4);
+    font-size: var(--logo);
   }
 
   #contato {
@@ -526,9 +544,12 @@ footer {
     align-items: center;
   }
 
-  .main-content {
+  .wrapper-img-formacao img {
+    padding-top: 30px;
   }
-}
 
-@media (max-width: 581px) {
+  .wrapper-img-sobre {
+    margin-top: 40px;
+    width: 70%;
+  }
 }
